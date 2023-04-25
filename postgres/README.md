@@ -1,0 +1,1 @@
+This repository shows how to synchronize a postgres database with elasticsearch using docker and docker-compose
