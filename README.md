@@ -252,8 +252,7 @@ user_last_name='wenga new',
 last_update=current_timestamp
 WHERE username='cwenga'
 ```
-In elacticsearch, you will still have 4 users, but with updated version of user ```cwenga```
-will have been updated
+In elacticsearch, you will still have 4 users, but with updated version of user ```cwenga```.
 ```json
 {
     "_index": "users",
