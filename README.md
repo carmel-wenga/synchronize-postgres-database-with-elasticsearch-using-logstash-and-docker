@@ -124,7 +124,7 @@ You should have the following result
 ```
 We have exactly 3 documents in the ```users``` index of elasticsearch.
 
-5. Now is time to see if our database is synced with elacticsearch.
+5. Now it is time to check if our database is synchronized with elacticsearch.
 
 Go back to the postgres container (step 3.) and connect to the datasync database.
 
