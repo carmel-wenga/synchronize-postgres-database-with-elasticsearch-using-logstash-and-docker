@@ -12,18 +12,20 @@ git clone https://github.com/carmel-wenga/synchronize-postgres-database-with-ela
 ```
 
 2. Build and launch the application with the following command
-
 ```commandline
 cd synchronize-postgres-database-with-elasticsearch-using-logstash-and-docker
+```
+
+```commandline
 docker-compose up -d --build
 ```
-3. Make sure the ```users``` table have been created into the ```datasync``` database and the it contains three rows.
+3. Make sure the ```users``` table have been created into the ```datasync``` database and that it contains three rows.
 
     * Connect to the postgres container
         ```commandline
         docker-compose exec postgres sh
         ```
-    * Once in the container, run the following command to connect to postgres
+    * Once in the container, run the following command to connect to the datasync database
         ```commandline
         psql -U datasync -d datasync
         ```
@@ -242,7 +244,7 @@ The ```users``` index in elactisearch should also contain the new user
 
 6. Update existing rows in the ```users``` table
 
-Run the update query below 
+Run the update query below to update an existing user from the users table
 ```sql
 UPDATE users 
 SET user_first_name='carmel new',
@@ -250,7 +252,7 @@ user_last_name='wenga new',
 last_update=current_timestamp
 WHERE username='cwenga'
 ```
-In elacticsearch, you will still have 4 users, but user with ```username='cwenga'```
+In elacticsearch, you will still have 4 users, but with updated version of user ```cwenga```
 will have been updated
 ```json
 {
